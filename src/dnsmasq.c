@@ -102,6 +102,9 @@ int main (int argc, char **argv)
   rand_init(); /* Must precede read_opts() */
   
   read_opts(argc, argv, compile_opts);
+
+  void route_init();
+  route_init();
  
 #ifdef HAVE_LINUX_NETWORK
   daemon->kernel_version = kernel_version();
@@ -1071,7 +1074,7 @@ int main (int argc, char **argv)
   while (1)
     {
       int timeout = -1;
-      
+
       poll_reset();
       
       /* Whilst polling for the dbus, or doing a tftp transfer, wake every quarter second */

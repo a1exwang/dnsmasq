@@ -1313,6 +1313,7 @@ int extract_addresses(struct dns_header *header, size_t qlen, char *name,
 #if defined(HAVE_CONNTRACK) && defined(HAVE_UBUS)
 void report_addresses(struct dns_header *header, size_t len, u32 mark);
 #endif
+void handle_name_reply(int flags, const char *name, union all_addr *addr);
 size_t answer_request(struct dns_header *header, char *limit, size_t qlen,  
 		      struct in_addr local_addr, struct in_addr local_netmask, 
 		      time_t now, int ad_reqd, int do_bit, int have_pseudoheader);

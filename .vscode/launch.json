@@ -1,0 +1,21 @@
+{
+    "configurations": [
+        {
+            "name": "dnsmasq",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/dnsmasq",
+            "args": [
+                "-C",
+                "dnsmasq.conf",
+                "--no-daemon"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": []
+        }
+    ]
+}
